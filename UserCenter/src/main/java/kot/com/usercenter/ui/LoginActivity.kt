@@ -7,7 +7,9 @@ import android.os.SystemClock
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.orhanobut.logger.Logger
+import com.reitsfin.base.utils.OkHttpUtil
 import com.umeng.analytics.MobclickAgent
 import kot.com.baselibrary.base.utils.ARouterUtils
 import kot.com.baselibrary.common.BaseConstant
@@ -19,9 +21,11 @@ import kot.com.baselibrary.ext.onClick
 import kot.com.baselibrary.ext.validatePwd
 import kot.com.baselibrary.toast.ToastUtils
 import kot.com.baselibrary.ui.activity.BaseMvpActivity
+import kot.com.baselibrary.ui.activity.TakephotoActivity
 import kot.com.baselibrary.utils.StringUtil
 import kot.com.baselibrary.utils.router.RouterPath
 import kot.com.usercenter.R
+import kot.com.usercenter.R.id.mMobileEt
 import kot.com.usercenter.data.protocol.TokenInfo
 import kot.com.usercenter.injection.component.DaggerUserComponent
 import kot.com.usercenter.injection.module.UserModule
@@ -29,7 +33,31 @@ import kot.com.usercenter.presenter.LoginPresenter
 import kot.com.usercenter.presenter.view.LoginView
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClickListener  {
+import java.io.File
+@Route(path = RouterPath.UserCenter.PATH_LOGIN)
+class LoginActivity : TakephotoActivity<LoginPresenter>(), LoginView, View.OnClickListener  {
+    override fun onDismiss(o: Any?) {
+
+    }
+
+    /**
+     *
+     * @param result 此参数是拍照完成之后得到的可以上传的文件格式的参数
+     *
+     */
+    override fun takeSuccess(result: File) {
+//        mPresenter.upImage(OkHttpUtil.createTextRequestBody("2"), OkHttpUtil.createPartWithAllImageFormats("file", result))
+    }
+    /**
+     *
+     * @param result 此参数是拍照完成之后得到的可以上传的文件格式的参数
+     * @param String 此参数是失败时的错误信息
+     */
+    override fun takeFail(result: File, msg: String) {
+    }
+
+    override fun takeCancel() {
+    }
 
     // 点击次数
     private val ARRAY_SIZE = 4
@@ -37,7 +65,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
     private val mHits = LongArray(ARRAY_SIZE)
 
     override fun injectComponent() {
-        DaggerUserComponent.builder().activityComponent(activityCoponent).userModule(UserModule()).build().inject(this)
+        DaggerUserComponent.builder().activityComponent(mActivityComponent).userModule(UserModule()).build().inject(this)
         mPresenter.mView = this
     }
 
@@ -69,38 +97,13 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
                 }
             }
             R.id.fast_regis -> {
-                //友盟埋点-登录页面_立即注册按钮点击事件
-                MobclickAgent.onEvent(applicationContext, "2_goto_register_action")
-                ARouterUtils.getInstance().startActivity(this, RouterPath.UserCenter.PATH_REGISTER)
+                showAlertView(fast_regis)
             }
-            R.id.forget_pwd -> {
-                //友盟埋点-登录页面_忘记密码按钮点击事件
-                MobclickAgent.onEvent(applicationContext, "3_goto_find_psw")
-                ARouterUtils.getInstance().startActivity(this,RouterPath.UserCenter.PATH_FORGETPWD)
-            }
-            R.id.ll_login_back_g -> {
-                openMainActivity(true)
-            }
-            R.id.ll_icon -> {
-//                // 测试类
-                onTestClick()
-            }
+
         }
     }
 
 
-    private fun onTestClick() {
-        System.arraycopy(mHits, 1, mHits, 0, mHits.size - 1);
-        mHits[mHits.size - 1] = SystemClock.uptimeMillis();
-        var currentTime = SystemClock.uptimeMillis() - ARRAY_SIZE * 490
-        if (mHits[0] >= currentTime) {
-            ARouterUtils.getInstance().startActivity(this,RouterPath.UserCenter.PATH_TEST_SETTING)
-            ToastUtils.centerToast(this, "开启隐藏关卡")
-        } else {
-            Logger.e("mHits[0] = " + mHits[0] + " , currentTime = $currentTime")
-        }
-
-    }
     var viewY: Int=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -123,15 +126,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
         if (BaseConstant.SHOW_TEST_MODE) {
             ll_icon.onClick(this)
         }
-//        root_login.addOnLayoutChangeListener { v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom ->
-//            //View代表方法传入的控件
-//            val viewLocation = IntArray(2)
-//            mLoginBtn.getLocationInWindow(viewLocation)
-//            viewY =viewLocation[1]
-//            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
-//            Logger.e("y方向距离$viewY")
-//            scrollview_login.scrollTo(0, viewY/3)
-//        }
+//
 
 
     }
