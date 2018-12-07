@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="bankwithcood">
+        <item>我爸爸的名字是?</item>
+        <item>我妈妈的名字是?</item>
+        <item>我爸爸的生日是?</item>
+        <item>我妈妈的生日是?</item>
+        <item>我妻子的名字是?</item>
+        <item>我丈夫的名字是?</item>
+        <item>我的出生地?</item>
+        <item>我的小学校名?</item>
+        <item>我的车票号(区分大小写)?</item>
+        <item>我儿子的名字?</item>
+        <item>我女儿的名字?</item>
+        <item>我的大学学号?</item>
+        <item>大学学的专业?</item>
+        <item>我的大学校名?</item>
+        <item>我的高中校名?</item>
+        <item>我的初中校名?</item>
+    </string-array>
+
+
+</resources>

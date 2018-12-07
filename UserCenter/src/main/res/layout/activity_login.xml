@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_login"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.LoginActivity">
+    <RelativeLayout
+        android:id="@+id/re_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fafafa">
+
+        <LinearLayout
+            android:id="@+id/ll_login_back_g"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:src="@mipmap/close_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ll_login_back_g"
+
+            android:textColor="@color/common_black"
+            android:textSize="16sp" />
+        <include
+            layout="@layout/include_head_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/re_header"
+        android:orientation="vertical">
+        <!--顶部标题栏-->
+        <!--<com.reitsfin.base.widgets.HeaderBar-->
+        <!--android:id="@+id/header_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:visibility="visible"-->
+        <!--app:titleText="睿云" />-->
+        <!--头部应用icon和应用名字-->
+        <LinearLayout
+            android:id="@+id/ll_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/login_logo" />
+
+            <TextView
+                android:id="@+id/tv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="ceshi"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--输入手机号和输入密码页面-->
+
+        <LinearLayout
+            style="@style/MatchWrap.Vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="40dp"
+            android:fitsSystemWindows="true">
+            <kot.com.baselibrary.widgets.EditTextFloatingLabel
+                android:id="@+id/mMobileEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:et_hint=""
+                app:et_hint_label=""
+                app:et_maxLength="11"
+                app:et_type="PHONE" />
+            <kot.com.baselibrary.widgets.EditTextFloatingLabel
+                android:id="@+id/mPwdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:et_hint=""
+                app:et_hint_label=""
+                app:et_type="PWD" />
+        </LinearLayout>
+
+
+        <!--登录按钮以及忘记密码和快速注册-->
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="45dp">
+
+            <kot.com.baselibrary.widgets.OnlyButton
+                android:id="@+id/mLoginBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:enabled="false"
+                android:text="登陆"
+
+                android:textSize="16sp"
+                app:backColor="@color/gray_button"
+                app:fillet="true"
+                app:radius="0"
+                app:textColor="@color/graytext" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@id/mLoginBtn"
+                android:layout_alignRight="@id/mLoginBtn"
+                android:layout_below="@id/mLoginBtn"
+                android:layout_marginTop="28dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/forget_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="忘记密码"
+
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/fast_regis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="注册"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--风险提示-->
+    <include
+        layout="@layout/include_risk_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/risk_tips_margin_bottom"/>
+</RelativeLayout>

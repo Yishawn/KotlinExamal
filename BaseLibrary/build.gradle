@@ -1,0 +1,129 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+android {
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tools_version
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    //Android Support
+
+    api "com.android.support:support-v4:${android_support_version}"
+    api "com.android.support:appcompat-v7:${android_support_version}"
+    api "com.android.support:recyclerview-v7:${android_support_version}"
+    api "com.android.support:design:${android_support_version}"
+    api "com.android.support:cardview-v7:${android_support_version}"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Anko Commons
+    api "org.jetbrains.anko:anko-commons:$anko_version"
+
+    // Support-v4 (only Anko Commons)
+    api "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
+
+    // RxKotlin and RxAndroid
+    api "io.reactivex.rxjava2:rxkotlin:${rx_kotlin_version}"
+    api "io.reactivex.rxjava2:rxandroid:${rx_android_version}"
+    api "io.reactivex.rxjava2:rxjava:${rx_java_version}"
+    //Retrofit
+    api "com.squareup.okhttp3:okhttp:${ok_http_version}"
+    api "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    api "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
+    api "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${retrofit_version}"
+
+    //Dagger2
+    api "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    //RxLifecycle
+    api "com.trello.rxlifecycle2:rxlifecycle-kotlin:${rx_lifecycle_version}"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:${rx_lifecycle_version}"
+
+    //Glide
+    api "com.github.bumptech.glide:glide:$glide_version"
+
+    //Circle ImageView
+    api "de.hdodenhof:circleimageview:${circle_imageview_version}"
+
+    //Alert View
+    api "com.bigkoo:alertview:${alert_view_version}"
+
+    //七牛
+    api 'com.qiniu:qiniu-android-sdk:7.3.+'
+
+    //底部导航
+    api 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+
+    //Banner
+    api 'com.youth.banner:banner:1.4.10'
+
+    //标签
+    api 'com.github.shts:TriangleLabelView:1.1.2'
+
+    //画廊
+    api 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+
+    //MulitStateView
+    api "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
+
+    //上下拉刷新
+    api 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+
+    //Kotlin Bus
+    api 'com.eightbitlab:rxbus:1.0.2'
+
+    //ARouter
+    api "com.alibaba:arouter-api:$arouter_api_version"
+
+    //BadgeView
+    api 'q.rorbin:badgeview:1.1.2'
+
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    api 'com.umeng.sdk:common:1.5.0'
+    api 'com.umeng.sdk:analytics:7.5.0'
+    api 'com.orhanobut:logger:2.2.0'
+    api 'ren.qinc.numberbutton:numberbutton:0.0.1'
+
+    //微信(不带统计版本)
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //沉浸式状态栏
+    api 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+}
+repositories {
+    mavenCentral()
+
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--列表分割线-->
+    <color name="list_split_line">#f7f7f7</color>
+    <!--弹窗分割线-->
+    <color name="theme">#feb806</color>
+    <color name="pop_split_line">#dcdcdc</color>
+    <color name="colorAccent">#3d3d3d</color>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#03a9f4</color>
+    <color name="common_bg">#f5f5f5</color>
+    <color name="common_black">#000000</color>
+    <color name="common_blue">#03a9f4</color>
+    <color name="common_blue_dark">#0288d1</color>
+    <color name="common_blue_light">#039be5</color>
+    <color name="common_disable">#d9d9d9</color>
+    <color name="common_divider">#d4d4d4</color>
+    <color name="common_gray">#dddddd</color>
+    <color name="common_purple">#d500f9</color>
+    <color name="common_red">#f11919</color>
+    <color name="common_white">#ffffff</color>
+    <color name="common_shap_bg">#F2F2F2</color>
+    <color name="common_yellow">#fe9c2f</color>
+    <!-- 白色 -->
+    <color name="fund_color">#FCDF90</color>
+    <color name="freeze">#97CAFE</color>
+    <color name="unfreeze">#C5B2FC</color>
+    <color name="selector">#10000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="two_point">#B4B4B4</color>
+    <color name="one_point">#9C9C9C</color>
+    <color name="three_point">#D8D8D8</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="line_gray">#F7F8FA</color>
+    <color name="text_blue_pressed">#1D7CB8</color>
+    <color name="text_blue">#269EEA</color>
+    <color name="text_gray">#FFA5A5A5</color>
+    <color name="text_dark">#999999</color>
+    <color name="text_light_dark">#333333</color>
+    <color name="text_normal">#666666</color>
+    <color name="transparent">#00000000</color>
+    <color name="deepskyblue">#53aceb</color>
+    <color name="gold_textcolor">#BB905B</color>
+    <color name="alert_blue">#057AF5</color>
+    <color name="header_bar_blue">#FF3498FF</color>
+    <color name="blue">#0092D9</color>
+    <color name="blue_tag">#69B2FE</color>
+    <color name="textcolor">#666666</color>
+    <color name="graytext">#999999</color>
+    <color name="back_ground">#F6F9Ff</color>
+    <color name="progress_startcolor">#80ffd300</color>
+    <color name="progress_endcolor">#a0ffcb00</color>
+    <color name="background_gray">#F4F4F4</color>
+    <color name="button_enable">#ffdddddd</color>
+    <color name="shengming_text">#666666</color>
+    <color name="button_gray">#d2d2d2</color>
+    <color name="product_color">#333333</color>
+    <color name="new_product_color">#555555</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="orange_light">#FF6F6F</color>
+    <color name="popback">#4d000000</color>
+    <color name="gray_button">#EBEBEB</color>
+    <color name="rose_gold">#FCB2B2</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="light_grey">#BFBFBF</color>
+    <color name="light_black">#555555</color>
+    <color name="gretex_statu">#999999</color>
+    <!-- 验证码按钮 -->
+    <color name="validate_btn">#555555</color>
+
+    <!-- 悬浮框 -->
+    <!-- divider分割线 -->
+    <color name="floating_divider_line">#ffdadada</color>
+    <!-- hint文字颜色 -->
+    <color name="floating_hint_text">#E4E4E4</color>
+    <!-- hintLabel文字颜色 -->
+    <color name="floating_hint_label_text">#9D9D9D</color>
+    <!-- 验证码文字颜色 -->
+    <color name="register_validate_btn">#555555</color>
+    <color name="webview_progress_color">#00ff00</color>
+
+    <!-- 刷新标题文本 -->
+    <color name="refresh_header_title">#FF888888</color>
+    <color name="line_color_gray">#F7F7F7</color>
+    <color name="theme_color">#BB905B</color>
+    <color name="unselected_indicator">#555555</color>
+    <color name="detail_text">#444444</color>
+    <color name="header_progress">#FF979797</color>
+    <color name="header_progress_transparent">#00000000</color>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="200dp">
+    <ImageView
+        android:layout_width="163dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/no_net"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/graytext"
+        android:text="页面加载失败，请稍后再试"
+        />
+</LinearLayout>

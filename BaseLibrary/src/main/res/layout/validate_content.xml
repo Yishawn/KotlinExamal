@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_validate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <!-- 验证码 -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/floating_divider_line" />
+
+    <com.kotlin.base.widgets.VerifyButton
+        android:id="@+id/get_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:background="@null"
+        android:gravity="center"
+        android:text="@string/get_verification_code"
+        android:textAllCaps="false"
+        android:textColor="@color/register_validate_btn"
+        android:textSize="14sp" />
+
+</LinearLayout>

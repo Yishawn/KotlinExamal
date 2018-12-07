@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- HeaderBar自定义属性 -->
+    <declare-styleable name="HeaderBar">
+        <attr name="isShowBack" format="boolean"/>
+        <attr name="titleText" format="string"/>
+        <attr name="rightText" format="string"/>
+    </declare-styleable>
+    <!-- 加载圆点-->
+    <declare-styleable name="DotPollingView">
+        <!--正常圆点颜色-->
+        <attr name="dotP_dot_color" format="color"/>
+        <!--变大圆点颜色-->
+        <attr name="dotP_dot_selected_color" format="color"/>
+        <!--圆点数量-->
+        <attr name="dotP_dot_count" format="integer"/>
+        <!--正常最小半径-->
+        <attr name="dotP_dot_radius" format="dimension"/>
+        <!--最大半径-->
+        <attr name="dotP_dot_max_radius" format="dimension"/>
+        <!--圆点最大间距-->
+        <attr name="dotP_dot_spacing" format="dimension"/>
+        <!--圆点大小变化率-->
+        <attr name="dotP_dot_size_change_rate" format="float"/>
+
+    </declare-styleable>
+    <!--公共属性-->
+         <attr name="backColor" format="color" />
+         <attr name="backColorPress" format="color" />
+         <attr name="backGroundImage" format="reference" />
+         <attr name="backGroundImagePress" format="reference" />
+         <attr name="textcolor" format="color" />
+         <attr name="textColorPress" format="color" />
+
+         <declare-styleable name="buttonM">
+             <attr name="backColor" />
+             <attr name="backColorPress" />
+             <attr name="backGroundImage"  />
+             <attr name="backGroundImagePress" />
+             <attr name="textColor" />
+             <attr name="textColorPress" />
+             <attr name="fillet" format="boolean" />
+             <attr name="radius" format="float" />
+             <attr name="shape">
+                 <enum name="rectangle" value="0" />
+                 <enum name="oval" value="1" />
+                 <enum name="line" value="2" />
+                 <enum name="ring" value="3" />
+             </attr>
+         </declare-styleable>
+    <declare-styleable name="AutoNewLineLayout">
+        <attr name="horizontalSpace" format="dimension|reference"/>
+
+        <attr name="vertivalSpace" format="dimension|reference"/>
+    </declare-styleable>
+    <style name="dialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <!-- LabelText自定义属性 -->
+    <declare-styleable name="LabelText">
+        <attr name="labelText" format="string"/>
+        <attr name="contentText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension" />
+        <attr name="dragOut" format="boolean" />
+    </declare-styleable>
+
+    <!-- EditText Floating -->
+    <declare-styleable name="EditTextFloatingLabel">
+        <attr name="et_type"  >
+            <enum name="NORMAL" value="100" />
+            <enum name="NUM" value="101"/>
+            <enum name="PHONE" value="102"/>
+            <enum name="PWD" value="103"/>
+            <enum name="VALIDATE" value="104"/>
+            <enum name="INVITE" value="105"/>
+        </attr>
+        <attr name="et_hint" format="string" />
+        <attr name="et_hint_label" format="string" />
+        <attr name="et_maxLength" format="integer" />
+    </declare-styleable>
+</resources>

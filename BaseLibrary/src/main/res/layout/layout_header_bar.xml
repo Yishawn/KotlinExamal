@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_header_bar_height"
+    android:background="@color/white">
+    <include
+        layout="@layout/include_head_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"/>
+    <LinearLayout
+        android:id="@+id/mLeftIv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/leftImg"
+            android:layout_width="8dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/back_g"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_toRightOf="@+id/mLeftIv"
+        android:id="@+id/mTitleTv"
+        android:singleLine="true"
+        style="@style/WrapWrap"
+        android:layout_centerVertical="true"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/text_big_size" />
+
+    <TextView
+        android:id="@+id/mRightTv"
+        style="@style/WrapMatch"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/common_padding"
+        android:paddingRight="@dimen/common_padding"
+        android:textColor="@color/common_black"
+        android:visibility="gone" />
+</RelativeLayout>

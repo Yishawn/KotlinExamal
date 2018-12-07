@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="coming_soon_tip">敬请期待~~~</string>
+    <string name="common_complete">完成</string>
+    <string name="common_edit">编辑</string>
+    <string name="common_delete">删除</string>
+    <string name="common_next">下一步</string>
+    <string name="common_save">保存</string>
+    <string name="no_data_tip">暂无数据~~~</string>
+    <string name="recharge">充值</string>
+    <string name="recharge_money_yuan">充值金额（元）</string>
+    <string name="credentials_to_upload">*打款凭证上传</string>
+    <string name="nav_bar_home">主页</string>
+    <string name="nav_bar_category">产品</string>
+    <string name="nav_bar_cart">购物车</string>
+    <string name="nav_bar_msg">财富</string>
+    <string name="nav_bar_user">我的</string>
+    <string name="test_click_tips">点击点击点击</string>
+    <string name="android_studio">Android Studio</string>
+    <string name="test_email">android.studio@android.com</string>
+    <string name="load_error">加载错误</string>
+    <string name="confirm_name_to_view_product_details">实名认证后可查看产品详情,为了更好地提供服务,请您及时进行实名认证</string>
+    <string name="next_time_again_say">下次再说</string>
+    <string name="to_confirm">去认证</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="loading">正在加载</string>
+    <string name="rest_of_number_of_residuals">您本季度剩余测评次数0次,请谨慎测评</string>
+    <string name="I_know">我知道了</string>
+    <string name="confirm">确定</string>
+    <string name="i_know">我知道了</string>
+    <string name="tips">提示</string>
+    <string name="take_photo">拍照</string>
+    <string name="album">相册</string>
+    <string name="system_album">系统图库</string>
+    <string name="cancel">取消</string>
+    <string name="product_details">项目信息</string>
+    <string name="risk_warn">风险提示</string>
+    <string name="hint_disclaimer">免责声明</string>
+    <string name="normal_data">- -</string>
+    <string name="market_have_risk">-市场有风险，决策需谨慎-</string>
+</resources>

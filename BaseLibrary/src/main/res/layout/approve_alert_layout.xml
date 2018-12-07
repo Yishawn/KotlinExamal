@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/buttons"
+    android:layout_width="250dp"
+    android:orientation="vertical"
+
+
+    android:layout_height="140dp">
+    <LinearLayout
+        android:background="@drawable/buttons"
+        android:layout_width="250dp"
+        android:orientation="vertical"
+
+
+        android:layout_height="140dp">
+
+
+
+
+
+        <TextView
+            android:id="@+id/dialog_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/common_black"
+            android:text="@string/confirm_name_to_view_product_details"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff4f4f4"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+            <Button
+
+                android:id="@+id/cancle"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/next_time_again_say"
+                android:textSize="16sp"
+                android:textColor="@color/graytext"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#fff4f4f4"
+                />
+            <Button
+
+                android:id="@+id/to_approve"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/to_confirm"
+                android:textSize="16sp"
+                android:textColor="@color/blue"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
