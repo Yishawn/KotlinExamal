@@ -6,31 +6,29 @@ import java.util.*
 /**
  * Created by yixiao on 2018/3/7.
  */
-object ParamsUtils{
-    // 参数校验加盐
-    val salt = "sLcgbLfgL2pwUuWTX7ueLfY3d8ctJ9hw"
+object ParamsUtils {
 
     /**
      * 获取有参签名
      */
-    fun getSignature(maps:Map<String, Any?>,nowTime:String):String{
+    fun getSignature(maps: Map<String, Any?>, nowTime: String): String {
         val entries = maps.entries
         var singDate = arrayOfNulls<String>(maps.size)
-        val uid= UserInfoManager.instance.getId()
-        for ((index,entry )in entries.withIndex()) {
+        val uid = UserInfoManager.instance.getId()
+        for ((index, entry) in entries.withIndex()) {
             if (entry.value != null) {
                 singDate[index] = entry.key
             }
         }
         val afterSort = getSortStringArray(singDate, maps)
-        val sign = Md5Util.encode(afterSort + nowTime + salt + UserInfoManager.instance.getToken())
-        return uid.toString()+":"+sign
+        val sign = Md5Util.encode(afterSort + nowTime + UserInfoManager.instance.getToken())
+        return uid.toString() + ":" + sign
     }
 
     /**
      * 获取当前时间
      */
-    fun getNowTime ():String{
+    fun getNowTime(): String {
         val nowTime = System.currentTimeMillis() / 1000
         return nowTime.toString()
     }
@@ -38,10 +36,10 @@ object ParamsUtils{
     /**
      * 获取无参签名
      */
-    fun getSignatureWithNoParam(now_time:String):String{
-        val signature = Md5Util.encode( now_time + salt + UserInfoManager.instance.getToken())
-        val uid=UserInfoManager.instance.getId()
-        return uid.toString()+":"+signature
+    fun getSignatureWithNoParam(now_time: String): String {
+        val signature = Md5Util.encode(now_time + UserInfoManager.instance.getToken())
+        val uid = UserInfoManager.instance.getId()
+        return uid.toString() + signature
     }
 
     /*
