@@ -1,0 +1,4 @@
+# KotlinExamal
+这是一个利用当前最火的语言kotlin 同时配上android组件化+retrofit+dagger+rxjava+kotlin+Rxlifecycle的mvp架构，模版提供在此，希望对你们有帮助
+因为是组件化模式所以使用了arouter（阿里巴巴的路由跳转）取代了传统的跳转模式，封装了全套的拍照功能直接继承takephotoactivity就可以完成整个拍照的权限等过程直接取到可以上传的相片文件
+文件上传直接封装了okhttp上传文件的utils，每个文件都注有注释适合刚入门kotlin的同仁学习使用，如果有更好的建议可以添加我的好友 qq2573776771
